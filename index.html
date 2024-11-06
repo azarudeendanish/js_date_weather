@@ -6,100 +6,413 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume-H~ome</title>
     <link rel="shortcut icon" href="./assets/image/leason2.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="./assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./assets/bootstrap-5.0.2-dist/css/bootstrap.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        body {
+            color: red
+        }
 
+        .watch {
+            width: 600px;
+            /* height: 200px; */
+            background: #fff url(https://th.bing.com/th/id/R.fede4fc099de12c9749b4a895bb3e852?rik=8QSTUYwSafbuZw&riu=http%3a%2f%2fcdn.elegantthemes.com%2fblog%2fwp-content%2fuploads%2f2013%2f09%2fbg-1-full.jpg&ehk=lqJF3XOyX2Q2LBsImh22NScvC7oZjrxyD%2fnLPLMWAIU%3d&risl=&pid=ImgRaw&r=0) no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            border-radius: 10px;
+            border: 3px solid black;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            color: #fff;
+        }
+
+        .days {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        /* .days .active{
+            color: #ffc107;
+            font-weight: bold;
+        }
+        .timeData .time .ampm.active{
+            color: #ffc107;
+            font-weight: bold;
+        } */
+        .timeData {
+            display: flex;
+            /* flex: 2; */
+            align-items: center;
+        }
+
+        .timeData .time {
+            font-size: 80px;
+            transform: scale(1, 2.5);
+        }
+
+        .timeData .time.amam {
+            font-size: 14px !important;
+            transform: unset;
+            align-self: baseline;
+            margin-top: 20px;
+        }
+
+        .temp {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: #ffc107;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .temp .fah {
+            align-self: flex-end;
+        }
+
+        .temp .monthDay {
+            display: flex;
+        }
+
+        .active {
+            color: #ffc107;
+            font-weight: bold;
+        }
+
+        .days div:nth-child(3) {
+            background-color: red;
+        }
+
+        @media (max-width: 576px) {
+            .subText {
+                font-size: 14px !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <section>
-        <nav class="navbar navbar-expand-lg navbar-light bg-white mt-2">
-            <div class="container">
-                <a class="navbar-brand Bootstrap" href="./index.html">Prakash</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./html/resume.html">Resume</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./html/project.html">Project</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./html/contact.html">Contact</a>
-                        </li>
-                </div>
-            </div>
-        </nav>
-    </section>
-    <section>
-        <div class="container my-5">
-            <div class="row ">
-                <div class="col-12 col-xl-6">
-                    <div class="MARKETING d-flex flex-column justify-content-center mt-xl-5 vh text-capitalize">
-                        <div class="busines">
-                            <div class="DESIGN text-white  text-center">FRONT END DEVELOPER</div>
-                            <div class="business pt-xl-4 mt-2"> help your future </div>
-                            <div class="online">Wiser web intern</div>
+    <section class="course">
+        <div class="container">
+            <h3 class="title text-center fs-1">Features Course</h3>
+            <div class="subText text-center fs-1">There are many variations of passages of Lorem Ipsum available, but
+                the majority have suffered alteration in some form.</div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="card">
+                        <div class="card-header p-0">
+                            <img src="https://prakashwiser.github.io/wiserbootstrap1/assets/images/courses-1.jpg"
+                                alt="image" class="w-100">
                         </div>
-                        <div class="d-flex flex-column flex-sm-row  ">
-                            <a class="btn btn-button btn-blue text-white" href="./html/resume.html">Resume</a>
-                            <a class="btn btn-button btn-outline-black mt-3 mt-sm-0 ms-sm-4"
-                                href="./html/project.html">Project</a>
+                        <div class="card-body">
+                            <div class="title fw-bold">Computer</div>
+                            <div class="subText">Computer Computer Computer Computer</div>
+                        </div>
+                        <div class="card-footer text-center">
+                            <div class="ratings">22 reviews</div>
+                            <div class="tag">program</div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-xl-6 mt-5 mt-xl-0">
-                    <div class="startbootstrap ps-lg-5">
-                        <img class=" resumeimg" src="./assets/image/prakash.jpg"
-                            alt="">
+                <div class="col-sm-6 col-md-4">
+                    <div class="card">
+                        <div class="card-header p-0">
+                            <img src="https://prakashwiser.github.io/wiserbootstrap1/assets/images/courses-1.jpg"
+                                alt="image" class="w-100">
+                        </div>
+                        <div class="card-body">
+                            <div class="title fw-bold">Computer</div>
+                            <div class="subText">Computer Computer Computer Computer</div>
+                        </div>
+                        <div class="card-footer text-center">
+                            <div class="ratings">22 reviews</div>
+                            <div class="tag">program</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="card">
+                        <div class="card-header p-0">
+                            <img src="https://prakashwiser.github.io/wiserbootstrap1/assets/images/courses-1.jpg"
+                                alt="image" class="w-100">
+                        </div>
+                        <div class="card-body">
+                            <div class="title fw-bold">Computer</div>
+                            <div class="subText">Computer Computer Computer Computer</div>
+                        </div>
+                        <div class="card-footer text-center">
+                            <div class="ratings">22 reviews</div>
+                            <div class="tag">program</div>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
+
     </section>
-    <section>
-        <div class="brands mt-5">
-            <div class="d-flex ipsa flex-column justify-content-center align-items-center">
-                <div class="About pt-5">About Me</div>
-                <div class="grow pt-2 text-center text-capitalize">My name is Prakash.</div>
-                <div class="aboutself  text-center mt-4 text-capitalize">I did BA degree in peravurani arts and science college
-                    and Done my degree(2020-2023)after i went to chennai yamaha production company 6
-                    months completed. after i did join wiser web intern (Jan-2023) front End Developer  join 3 moths
-                    i did completed more then 5 project interactive website.  using only  Html,Css,Bootstrap.
+    <div class="text-centre">Select City</div>
+    <select name="city" id="city" onchange=this.value>
+        <option value="trichy">trichy</option>
+        <option value="pudukkottai">pudukkottai</option>
+        <option value="thanjavur">thanjavur</option>
+        <option value="peravurani">peravurani</option>
+        <option value="avanam">avanam(sri lanka)</option>
+        <option value="chicago">USA</option>
+        <option value="vancouver">canada</option>
+        <option value="cuba">cuba</option>
+        <option value="brazil">brazil</option>
+        <option value="london">london</option>
+        <option value="iceland">iceland</option>
+        <option value="finland">finland</option>
+        <option value="sudan">sudan</option>
+        <option value="iraq">iraq</option>
+        <option value="oman">oman</option>
+        <option value="japan">japan</option>
+    </select>
+    <button type="submit" onclick="getCityData()">Submit</button>
+    <div class="row">
+        <div class="col-md-6">
+            <div id="cityName">Dummy</div>
+            <div class="d-flex">
+                <div id="tempText"></div>
+                <div><img src="" alt="" id="tempImage"></div>
+                <div id="temp">30</div>
+                <div class="d-flex flex-column">
+                    <div><button type="submit">Cel</button></div>
+                    <div><button type="submit">Far</button></div>
                 </div>
-                <div class="d-flex py-4 socialicons">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                    <i class="fa fa-linkedin-square ps-3" aria-hidden="true"></i>
-                    <i class="fa fa-github ps-3" aria-hidden="true"></i>
+                <div class="d-flex flex-column">
+                    <div>max</div>
+                    <div>min</div>
                 </div>
             </div>
         </div>
-    </section>
-    <footer>
-        <div class="container my-4">
-            <div class="row text-center text-sm-start">
-                <div class="col-12 col-sm-6 col-xl-7 ">
-                    <div>Copyright © Your Website 2023</div>
-                </div>
-                <div class="col-12 col-sm-6 col-xl-5">
-                    <div class="ps-5 terms text-capitalize">
-                        <a class="text-decoration-none" href="">privacy<span>.</span></a>
-                        <a class="ps-2 ps-sm-2 terms text-decoration-none" href="">terms<span>.</span></a>
-                        <a class="ps-1 ps-sm-2 terms text-decoration-none" href="">contact</a>
-                    </div>
-                </div>
-            </div>
+        <div class="col-md-6">
+            <div>Wind <span id="wind">4</span> KPH</div>
+            <div>Humidity <span id="humidity">67%</span></div>
         </div>
-    </footer>
-    <script src="./assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    </div>
+
+
+    <div class="watch" style="margin-top: 50px">
+        <div class="days">
+            <div class="sunday" id="sunday0">Sun</div>
+            <div class="sunday" id="sunday1">Mon</div>
+            <div class="sunday" id="sunday2">Tue</div>
+            <div class="sunday" id="sunday3">Wed</div>
+            <div class="sunday" id="sunday4">Thu</div>
+            <div class="sunday" id="sunday5">Fri</div>
+            <div class="sunday" id="sunday6">Sat</div>
+        </div>
+        <div class="timeData">
+            <div class="time amam" id="time1">
+                <div class="ampm" id="ampm1">am</div>
+                <div class="ampm" id="ampm2">pm</div>
+            </div>
+            <div class="time" id="time2">10</div>
+            <div class="time" id="time3">:</div>
+            <div class="time" id="time4">00</div>
+            <div class="time" id="time5">:</div>
+            <div class="time" id="time6">00</div>
+        </div>
+        <div class="temp">
+            <div class="fah" id="cityNamee"></div>
+            <div class="fah"><span id="fahData">79</span><span>`F</span></div>
+            <div class="monthDay">
+                <div class="month"><span id="month">12</span><sub class="text">M</sub></div>
+                <div class="day"><span id="day">27</span><sub class="text">D</sub></div>
+            </div>
+
+        </div>
+    </div>
+    <!-- day
+    am pm
+    hour: minutes:seconds
+    month: date : year
+    weather
+    day/night
+    battery
+    alarm -->
+    <h1>Battery Information</h1>
+    <p id="battery-level">Battery Level: N/A</p>
+    <p id="charging-status">Charging: N/A</p>
+    <p id="charging-time">Charging Time: N/A</p>
+    <p id="discharging-time">Discharging Time: N/A</p>
+    <script>
+        // momentjs
+        setInterval(() => clock(), 1000);
+        function clock() {
+            let dayNumberr = moment().format('d')
+            console.log(dayNumberr);
+
+            // let element = document.getElementById(`sunday${dayNumberr + 1}`)
+            if (dayNumberr == 0 || dayNumberr) {
+
+                document.getElementById(`sunday${dayNumberr}`).classList.add('active')
+            }
+            // if (dayNumberr) {
+            //     document.getElementById(`${dayNumberr}`).classList.add('active')
+            // }
+            let am_pm = moment().format('a')
+            console.log(am_pm);
+
+            let ampmElement1 = document.getElementById('ampm1')
+            let ampmElement2 = document.getElementById('ampm2')
+            let ampmCheck = (am_pm == 'am') ? ampmElement1.classList.add('active') : ampmElement2.classList.add('active')
+            document.getElementById('time2').innerHTML = moment().format('h')
+            document.getElementById('time4').innerHTML = moment().format('mm')
+            document.getElementById('time6').innerHTML = moment().format('ss')
+            document.getElementById('month').innerHTML = moment().format('MM')
+            document.getElementById('day').innerHTML = moment().format('Do')
+
+        }
+
+        // if condition
+        // if (am_pm == 'am') {
+        //     document.getElementById('ampm1').classList.add('active')
+        // } else {
+        //     document.getElementById('ampm2').classList.add('active')
+        // }
+        // OR using ternary operator
+
+
+        // let allDate = new Date()
+        // let dayNumber = allDate.getDay()
+        // console.log(dayNumber);
+        // let dayArray = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
+        // let day = dayArray[dayNumber]
+        // console.log(day);
+        // let hour = allDate.getHours()
+        // let minutes = allDate.getMinutes()
+        // let seconds = allDate.getSeconds()
+        // console.log(hour, minutes, seconds);
+        // let monthArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        // let monthNumber = allDate.getMonth()
+        // let month = monthArray[monthNumber]
+        // let date = allDate.getDate()
+        // let year = allDate.getFullYear()
+        // console.log(month, date, year);
+        // console.log(hour);
+        // hour = 12
+        // let ampm;
+        // if (hour > 4 && hour < 12) {
+        //     ampm = 'am'
+        // } else {
+        //     ampm = 'pm'
+        // }
+        // console.log(ampm);
+        // if (ampm == 'am') {
+        //     document.getElementById('body').style.backgroundColor = 'white'
+        // } else {
+        //     document.getElementById('body').style.backgroundColor = '#3b3939'
+        // }
+
+        // weather
+        // document.getElementById('city').value
+        getCityData()
+        var getDatas;
+        function getCityData() {
+            let apiKey = '0db87d88ba744ed896a103608242507';
+            let getCity = document.getElementById('city').value
+            // let CITY = 'trichy'
+            let apiData = 'http://api.weatherapi.com/v1/current.json?key=' + apiKey + '&q=' + getCity + '&aqi=no'
+            // let apiData = 'http://api.weatherapi.com/v1/current.json?key=0db87d88ba744ed896a103608242507&q=peravurani&aqi=no'
+            let getApiData;
+            // fetch(apiData)
+            //     .then((response) => {
+            //         let getApiData = response.json()
+            //         return getApiData;
+            //     })
+            //     .then((data) => {
+            //         console.log(data);
+            //         document.getElementById('cityName').innerHTML = `${data.location.name}, ${data.location.region}, ${data.location.country}`
+            //         console.log(cityName);
+            //         document.getElementById('temp').innerHTML = data.current.temp_c
+            //         document.getElementById('humidity').innerHTML = data.current.humidity
+            //         document.getElementById('wind').innerHTML = data.current.wind_kph
+            //         document.getElementById('tempImage').src = data.current.condition.icon
+            //         document.getElementById('tempText').innerHTML = data.current.condition.text
+            //     })
+
+            axios.get(apiData)
+                .then((response) => {
+                    console.log(response.data);
+                    data = response.data
+                    document.getElementById('fahData').innerHTML = data.current.temp_f
+                    document.getElementById('cityNamee').innerHTML = `${data.location.name}`
+                    document.getElementById('cityName').innerHTML = `${data.location.name}, ${data.location.region}, ${data.location.country}`
+                    console.log(cityName);
+                    document.getElementById('temp').innerHTML = data.current.temp_c
+                    document.getElementById('humidity').innerHTML = data.current.humidity
+                    document.getElementById('wind').innerHTML = data.current.wind_kph
+                    document.getElementById('tempImage').src = data.current.condition.icon
+                    document.getElementById('tempText').innerHTML = data.current.condition.text
+                })
+        }
+
+        let batteryIsCharging = false;
+
+        navigator.getBattery().then((battery) => {
+            batteryIsCharging = battery.charging;
+            console.log(batteryIsCharging);
+
+
+            battery.addEventListener("chargingchange", () => {
+                batteryIsCharging = battery.charging;
+                console.log(batteryIsCharging);
+
+            });
+        });
+        navigator.getBattery().then((battery) => {
+
+
+            updateBatteryInfo(battery);
+
+            // Add event listeners for battery status changes
+            battery.addEventListener('chargingchange', () => {
+                    updateBatteryInfo(battery);
+                });
+
+            battery.addEventListener('chargingtimechange',
+                function () {
+                    updateBatteryInfo(battery);
+                });
+
+            battery.addEventListener('dischargingtimechange',
+                function () {
+                    updateBatteryInfo(battery);
+                });
+
+            battery.addEventListener('levelchange',
+                function () {
+                    updateBatteryInfo(battery);
+                });
+        });
+        function updateBatteryInfo(battery) {
+            document.getElementById('battery-level')
+                .textContent = 
+                  `Battery Level: ${battery.level * 100}%`;
+            document.getElementById('charging-status')
+                .textContent = 
+                  `Charging: ${battery.charging ? 'Yes' : 'No'}`;
+            document.getElementById('charging-time')
+                .textContent = 
+                  `Charging Time: ${battery.chargingTime} seconds`;
+            document.getElementById('discharging-time')
+                .textContent = 
+                  `Discharging Time: ${battery.dischargingTime} seconds`;
+        }
+
+
+
+    </script>
 </body>
 
 </html>

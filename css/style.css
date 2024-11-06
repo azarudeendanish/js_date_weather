@@ -178,6 +178,9 @@ body {
   border-radius: 12px !important;
   /* font-weight: 600; */
 }
+.bg-white{
+  background-color: #fff;
+}
 @media (min-width: 300px) {
   .DESIGN {
     width: 70%;

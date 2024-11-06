@@ -10,6 +10,15 @@
     <link rel="stylesheet" href="../assets/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/style.css">
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "jWsPy4MJluY_yXdjG",
+            });
+        })();
+    </script>
 </head>
 
 <body>
@@ -52,13 +61,13 @@
             <form action="../html/client.html ">
                 <div class="d-flex flex-column  Contact m-auto">
                     <input type="email" class="form-control my-4" id="email" placeholder="Enter email" name="email">
-                    <input type="password" class="form-control" id="pwdn" placeholder="Password" name="email">
-                    <input type="tel" class="form-control my-4" id="pwd" placeholder="Mobile number">
+                    <input type="text" class="form-control" id="name" placeholder="name" name="name">
+                    <input type="tel" class="form-control my-4" id="mobile" placeholder="Mobile number">
                     <div class="mb-3">
-                        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Massage"
+                        <textarea class="form-control" id="message" placeholder="Massage"
                             rows="10"></textarea>
                     </div>
-                    <div class="btn m-auto Submitbtn  my-4 px-4 rounded-3 work">Submit</div>
+                    <div class="btn m-auto Submitbtn  my-4 px-4 rounded-3 work" onclick="sendMail()">Submit</div>
                 </div>
         </div>
     </section>
@@ -81,6 +90,18 @@
         </div>
     </footer>
     <script src="../assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        
+        function sendMail() {
+            let params = {
+                email:document.getElementById('email').value,
+                name:document.getElementById('name').value,
+                mobile:document.getElementById('mobile').value,
+                message:document.getElementById('message').value,
+            }
+            emailjs.send('service_c9lzwlt', 'template_bojtzgg', params).then(alert('Email sent'));
+        }
+    </script>
 </body>
 
 </html>
